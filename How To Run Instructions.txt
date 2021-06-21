@@ -10,3 +10,10 @@ For Windows :
 	(1) g++ src/*.cpp -Iinclude64 -Llib64 -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -o winexe64bit/epicsnakegame.exe
 	(2) cd winexe64bit
 	(3) .\epicsnakegame
+
+
+For Linux  : 
+
+	(SDL2.h,SDL2_image.h,SDL2_ttf.h,SDL2_mixer.h must be installed)
+	(1)g++ src/*.cpp -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -o epicsnakegame
+	(2)./epicsnakegame.out
