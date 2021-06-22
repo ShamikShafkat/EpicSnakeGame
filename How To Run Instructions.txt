@@ -15,5 +15,5 @@ For Windows :
 For Linux  : 
 
 	(SDL2.h,SDL2_image.h,SDL2_ttf.h,SDL2_mixer.h must be installed)
-	(1)g++ src/*.cpp -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -o epicsnakegame
+	(1)g++ src/*.cpp -Iinclude -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -o epicsnakegame
 	(2)./epicsnakegame.out
