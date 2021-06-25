@@ -8,11 +8,11 @@ bool create_window();
 
 bool load_media();
 
-SDL_Texture *loadtexture(char ch[],int x);
+SDL_Texture *loadtexture(char path[],int colorkey_black);
 
 bool loadttf();
 
-SDL_Texture *MAKETTF(char ch[],int a,bool Make_Null);
+SDL_Texture *MAKETTF(char path[],int colour,bool Make_Null);
 
 void INITIALIZER();
 

@@ -1,6 +1,6 @@
 #include "lib_HS_DIF.h"
 
-void HIGHSCORE(char path[],SDL_Rect *temp, SDL_Rect *points_rect)
+void HIGHSCORE(char path[],SDL_Rect *HS_rect, SDL_Rect *points_rect)
 {
     char name[500] = " ";
     int score,i,j,start,finish;
@@ -48,7 +48,7 @@ void HIGHSCORE(char path[],SDL_Rect *temp, SDL_Rect *points_rect)
         SDL_RenderClear(renderer);
 
         SDL_RenderCopy(renderer,Snake_Images[SNAKE_BG],NULL,NULL);
-        SDL_RenderCopy(renderer,True_Type_Font[TRUE_TYPE_FONT_HIGHSCORE],NULL,temp);
+        SDL_RenderCopy(renderer,True_Type_Font[TRUE_TYPE_FONT_HIGHSCORE],NULL,HS_rect);
         SDL_RenderCopy(renderer,Snake_Images[SNAKE_SCORE],NULL,points_rect);
         SDL_RenderPresent(renderer);
         SDL_Delay(1000);

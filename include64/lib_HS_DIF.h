@@ -4,7 +4,7 @@
 #include "libdeclare.h"
 #include "libinitialize.h"
 
-void HIGHSCORE(char path[],SDL_Rect *temp, SDL_Rect *points_rect);
+void HIGHSCORE(char path[],SDL_Rect *HS_rect, SDL_Rect *points_rect);
 
 void INPUT_NAME(char name[]);
 

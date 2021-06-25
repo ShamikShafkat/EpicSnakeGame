@@ -295,11 +295,11 @@ bool load_media()
 
 }
 
-SDL_Texture *loadtexture(char ch[],int x)
+SDL_Texture *loadtexture(char path[],int colorkey_black)
 {
     SDL_Surface *temp = NULL ;
 
-    temp = IMG_Load(ch);
+    temp = IMG_Load(path);
 
     if(temp == NULL)
     {
@@ -307,7 +307,7 @@ SDL_Texture *loadtexture(char ch[],int x)
     }
     else
     {
-        if(x==1)
+        if(colorkey_black==1)
         {
             SDL_SetColorKey(temp,true,SDL_MapRGB(temp->format,0,0,0));
         }
@@ -495,7 +495,7 @@ bool loadttf()
 
 }
 
-SDL_Texture* MAKETTF(char ch[],int a,bool Make_Null)
+SDL_Texture* MAKETTF(char path[],int colour,bool Make_Null)
 {
     SDL_Surface *temp = NULL;
 
@@ -511,13 +511,13 @@ SDL_Texture* MAKETTF(char ch[],int a,bool Make_Null)
     SDL_Color font_color1 = {0,0,0};
     SDL_Color font_color2 = {255,255,0};
 
-    if(a==0)
+    if(colour==0)
     {
-        temp = TTF_RenderText_Solid(Name_and_Score,ch,font_color1);
+        temp = TTF_RenderText_Solid(Name_and_Score,path,font_color1);
     }
     else
     {
-        temp = TTF_RenderText_Solid(Name_and_Score,ch,font_color2);
+        temp = TTF_RenderText_Solid(Name_and_Score,path,font_color2);
     }
 
     if(temp == NULL)
