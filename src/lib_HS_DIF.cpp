@@ -250,6 +250,7 @@ void SHOW_HIGHSCORE(char path[],int start,int finish)
     }
 
     SDL_RenderPresent(renderer);
+    SDL_Delay(1000/30);
     fclose(FILEPOINTER);
 }
 
